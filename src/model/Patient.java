@@ -3,25 +3,25 @@ package model;
 public class Patient {
 	
 	private int id;
-	private String first_name; // Don't use underscores
-	private String last_name; // Don't use underscores
-	private int insurance_id;
+	private String firstName; 
+	private String lastName; 
+	private int insuranceId;
 	private double weight;
 	private double height;
-	private String blood_type; // Don't use underscores
+	private String bloodType; 
 	private String insurance;
 	
 	//constructor
 	
-	public Patient(int id, String first_name, String last_name, int insurance_id, double weight, double height, String blood_type, String insurance){
-		this.id=id; // Leave spaces between mathematical signs
-		this.first_name=first_name;
-		this.last_name=last_name;
-		this.insurance_id=insurance_id;
-		this.weight=weight;
-		this.height=height;
-		this.blood_type=blood_type;
-		this.insurance=insurance;
+	public Patient(int id, String firstName, String lastName, int insuranceId, double weight, double height, String bloodType, String insurance){
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.insuranceId = insuranceId;
+		this.weight = weight;
+		this.height = height;
+		this.bloodType = bloodType;
+		this.insurance = insurance;
 	}
 	
 	//getters
@@ -31,15 +31,15 @@ public class Patient {
 	}
 	
 	public String getFirstName(){
-		return first_name;
+		return firstName;
 	}
 	
 	public String getLastName(){
-		return last_name;
+		return lastName;
 	}
 	
 	public int getInsuranceId(){
-		return insurance_id;
+		return insuranceId;
 	}
 	
 	public double getWeight(){
@@ -51,7 +51,7 @@ public class Patient {
 	}
 	
 	public String getBloodType(){
-		return blood_type;
+		return bloodType;
 	}
 	
 	public String getInsurance(){
@@ -64,16 +64,16 @@ public class Patient {
 		this.id=id;
 	}
 	
-	public void setFirstName(String first_name){
-		this.first_name=first_name;
+	public void setFirstName(String firstName){
+		this.firstName = firstName;
 	}
 	
-	public void setLastName(String last_name){
-		this.last_name=last_name;
+	public void setLastName(String lastName){
+		this.lastName = lastName;
 	}
 	
-	public void setInsuranceId(int insurance_id){
-		this.insurance_id=insurance_id;
+	public void setInsuranceId(int insuranceId){
+		this.insuranceId = insuranceId;
 	}
 	
 	public void setWeight(double weight){
@@ -84,8 +84,8 @@ public class Patient {
 		this.height=height;
 	}
 	
-	public void setBloodType(String blood_type){
-		this.blood_type=blood_type;
+	public void setBloodType(String bloodType){
+		this.bloodType = bloodType;
 	}
 	
 	public void setInsurance(String insurance){

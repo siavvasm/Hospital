@@ -17,11 +17,11 @@ public class Hospital {
 	 */
 	
 	public Hospital(List<Employee> employee, List<Department> department, List<Patient> patient, List<Measurement> measurement, List<Hospitality> hospitality){
-		this.employee=employee; // Leave spaces
-		this.department=department;
-		this.patient=patient;
-		this.measurement=measurement;
-		this.hospitality=hospitality;
+		this.employee = employee; // Leave spaces
+		this.department = department;
+		this.patient = patient;
+		this.measurement = measurement;
+		this.hospitality = hospitality;
 	}
 	
 	/*
@@ -105,16 +105,16 @@ public class Hospital {
 	public List<Employee> belongTo(String departmentName){
 		
 		// Create an empty list for storing the employees of the desired department
-		List<Employee> empl = new ArrayList<Employee>(); // Preferable list name: deptEmployees or employees
+		List<Employee> departmentEmployee = new ArrayList<Employee>();
 		System.out.println("The employees that belong to " + departmentName + " " + "are: ");
 		
 		for (Employee e : employee){
 			
-			if (e.getDepartment().equals(departmentName)){ // getDepatmentName()
-				empl.add(e);
+			if (e.getDepartment().equals(departmentName)){
+				departmentEmployee.add(e);
 				System.out.println(e.getLastName());
 			}
 		}
-		return employee;
+		return departmentEmployee;
 	}
 }

@@ -19,31 +19,30 @@ public class Exec {
 		/*
 		 *  1. Definition of the Hospital object fields
 		 */
-		// Your variables should be more descriptive (and more than three letters :P)
-		List<Character> l1 = new ArrayList<Character>();
-		List<Character> l2 = new ArrayList<Character>();
-		List<Integer> dl1 = new ArrayList<Integer>();
-		List<Integer> dl2 = new ArrayList<Integer>();
+		List<Character> buildinfsOfDepartment1 = new ArrayList<Character>();
+		List<Character> buildinfsOfDepartment2 = new ArrayList<Character>();
+		List<Integer> IdOfDoctors1 = new ArrayList<Integer>(); //for patient 1
+		List<Integer> IdOfDoctors2 = new ArrayList<Integer>(); // for patient 2
 		
 		
-		List<Doctor> doc = new ArrayList<Doctor>(); // call this list something like doctors. Do the same for the other variables.
-		List<Nurse> nur = new ArrayList<Nurse>();
-		List<Employee> empl = new ArrayList<Employee>();
-		List<Patient> pat = new ArrayList<Patient>();
-		List<Department> dep = new ArrayList<Department>();
-		List<Hospitality> hosp = new ArrayList<Hospitality>();
-		List<Measurement> meas = new ArrayList<Measurement>();
+		List<Doctor> doctors = new ArrayList<Doctor>();
+		List<Nurse> nurses = new ArrayList<Nurse>();
+		List<Employee> employees = new ArrayList<Employee>();
+		List<Patient> patients = new ArrayList<Patient>();
+		List<Department> departments = new ArrayList<Department>();
+		List<Hospitality> hospitalities = new ArrayList<Hospitality>();
+		List<Measurement> measurements = new ArrayList<Measurement>();
 		
-		l1.add('A');
-		l1.add('B');
-		l1.add('C');
+		buildinfsOfDepartment1.add('A');
+		buildinfsOfDepartment1.add('B');
+		buildinfsOfDepartment1.add('C');
 		
-		l2.add('D');
-		l2.add('E');
-		l2.add('F');
+		buildinfsOfDepartment2.add('D');
+		buildinfsOfDepartment2.add('E');
+		buildinfsOfDepartment2.add('F');
 		
-		dl1.add(1);
-		dl2.add(2);
+		IdOfDoctors1.add(1);
+		IdOfDoctors2.add(2);
 		
 		Doctor doc1 = new Doctor(1,"George","Papadopoulos",45,3000,"D1","pathologist","fully");
 		Doctor doc2 = new Doctor(2,"Mary","Smith",40,2500,"D2","dentist","fully");
@@ -58,11 +57,11 @@ public class Exec {
 		Patient p1 = new Patient(1,"Chris","L",1234,70,180,"AB","IKA");
 		Patient p2 = new Patient(2,"Laura","M",5678,50,160,"A+","IKA");
 
-		Department d1 = new Department("D1", doc1, l1);
-		Department d2 = new Department("D2", doc2, l2);
+		Department d1 = new Department("D1", doc1, buildinfsOfDepartment1);
+		Department d2 = new Department("D2", doc2, buildinfsOfDepartment2);
 		
-		Hospitality h1 = new Hospitality(1, dl1, "17/02/2017" , "19/2/2017");
-		Hospitality h2 = new Hospitality(2, dl2, "18-2-2017", "18-2-2017");
+		Hospitality h1 = new Hospitality(1, IdOfDoctors1, "17/02/2017" , "19/2/2017");
+		Hospitality h2 = new Hospitality(2, IdOfDoctors2, "18-2-2017", "18-2-2017");
 		
 		Measurement m1 = new Measurement("Blood Pressure", 12, "no clue", "2017-02-17", 1,1);
 		Measurement m2 = new Measurement("Hematocrit", 38, "no clue", "2017-02-18", 2,2);
@@ -70,34 +69,34 @@ public class Exec {
 		/*
 		 * 2. Add the individual objects to the appropriate lists
 		 */
-		doc.add(doc1);
-		doc.add(doc2);
+		doctors.add(doc1);
+		doctors.add(doc2);
 		
-		nur.add(n1);
-		nur.add(n2);
+		nurses.add(n1);
+		nurses.add(n2);
 		
-		empl.add(doc1);
-		empl.add(doc2);
-		empl.add(n1);
-		empl.add(n2);
+		employees.add(doc1);
+		employees.add(doc2);
+		employees.add(n1);
+		employees.add(n2);
 
-		pat.add(p1);
-		pat.add(p2);
+		patients.add(p1);
+		patients.add(p2);
 		
-		dep.add(d1);
-		dep.add(d2);
+		departments.add(d1);
+		departments.add(d2);
 		
-		hosp.add(h1);
-		hosp.add(h2);
+		hospitalities.add(h1);
+		hospitalities.add(h2);
 		
-		meas.add(m1);
-		meas.add(m2);
+		measurements.add(m1);
+		measurements.add(m2);
 		
 		/*
 		 * 3. Create the Hospital object containing the predefined info
 		 */
 		
-		Hospital hospital = new Hospital(empl,dep,pat,meas,hosp);
+		Hospital hospital = new Hospital(employees,departments,patients,measurements,hospitalities);
 		
 		/*
 		 * 4. Printing info about the hospital

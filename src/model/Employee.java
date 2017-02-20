@@ -3,20 +3,20 @@ package model;
 public class Employee {
 	
 	private int id;
-	private String first_name; // Don't use underscores
-	private String last_name; // Don't use underscores
+	private String firstName;
+	private String lastName; 
 	private int age;
 	private double salary;
 	private String department;
 
 	//constructor
-	public Employee(int id, String first_name, String last_name, int age, double salary, String department){
-		this.id=id;
-		this.first_name=first_name;
-		this.last_name=last_name;
-		this.age=age;
-		this.salary=salary;
-		this.department=department;
+	public Employee(int id, String firstName, String lastName, int age, double salary, String department){
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.salary = salary;
+		this.department = department;
 	}
 	
 	//getters
@@ -26,11 +26,11 @@ public class Employee {
 	}
 	
 	public String getFirstName(){
-		return first_name;
+		return firstName;
 	}
 	
 	public String getLastName(){
-		return last_name;
+		return lastName;
 	}
 	
 	public int getAge(){
@@ -48,26 +48,26 @@ public class Employee {
 	//setters
 	
 	public void setId(int id){
-		this.id=id;
+		this.id = id;
 	}
 	
-	public void setFirstName(String first_name){
-		this.first_name=first_name;
+	public void setFirstName(String firstName){
+		this.firstName = firstName;
 	}
 	
-	public void setLastName(String last_name){
-		this.last_name=last_name;
+	public void setLastName(String lastName){
+		this.lastName = lastName;
 	}
 	
 	public void setAge(int age){
-		this.age=age;
+		this.age = age;
 	}
 	
 	public void setSalary(double salary){
-		this.salary=salary;
+		this.salary = salary;
 	}
 	
 	public void setDepartment(String department){
-		this.department=department;
+		this.department = department;
 	}
 }

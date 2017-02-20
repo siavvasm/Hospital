@@ -3,34 +3,34 @@ package model;
 public class Doctor extends Employee{
 	
 	//extra fields
-	private String field_of_specialty; // Don't use underscores
-	private String type_of_employment; //either fully or intern
+	private String fieldOfSpecialty;
+	private String typeOfEmployment; //either fully or intern
 	
 	//Constructor
-	public Doctor(int id, String first_name, String last_name, int age, double salary, String department, String field_of_specialty, String type_of_employment){
-		super(id,first_name, last_name, age, salary, department);
-		this.field_of_specialty = field_of_specialty;
-		this.type_of_employment = type_of_employment;
+	public Doctor(int id, String firstName, String lastName, int age, double salary, String department, String fieldOfSpecialty, String typeOfEmployment){
+		super(id,firstName, lastName, age, salary, department);
+		this.fieldOfSpecialty = fieldOfSpecialty;
+		this.typeOfEmployment = typeOfEmployment;
 	}
 	
 	//getters
 	
-	public String getFieldOfSpecialty(){ // Nice! (Camel Case Writing)
-		return field_of_specialty;
+	public String getFieldOfSpecialty(){ 
+		return fieldOfSpecialty;
 	}
 	
-	public String getTypeOfEmployment(){ // Nice! (Camel Case Writing)
-		return type_of_employment;
+	public String getTypeOfEmployment(){
+		return typeOfEmployment;
 	}
 	
 	//setters
 	
-	public void setFieldOfSpecialty(String field_of_specialty){ // Nice! (Camel Case Writing)
-		this.field_of_specialty=field_of_specialty;
+	public void setFieldOfSpecialty(String fieldOfSpecialty){
+		this.fieldOfSpecialty = fieldOfSpecialty;
 	}
 	
-	public void setTypeOfEmployment(String type_of_employment){ // Nice! (Camel Case Writing)
-		this.type_of_employment=type_of_employment;
+	public void setTypeOfEmployment(String typeOfEmployment){
+		this.typeOfEmployment = typeOfEmployment;
 	}
 
 }

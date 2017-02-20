@@ -3,24 +3,24 @@ package model;
 public class Nurse extends Employee{
 	
 	//extra field
-	private String type_of_degree; // Don't use underscores
+	private String typeOfDegree; // university or technical school
 	
 	//constructor
-	public Nurse(int id, String first_name, String last_name, int age, double salary, String department, String type_of_degree){
-		super(id, first_name, last_name, age, salary, department);
-		this.type_of_degree = type_of_degree;
+	public Nurse(int id, String firstName, String lastName, int age, double salary, String department, String typeOfDegree){
+		super(id, firstName, lastName, age, salary, department);
+		this.typeOfDegree = typeOfDegree;
 	}
 	
 	//getter
 	
 	public String getTypeOfDegree(){
-		return type_of_degree;
+		return typeOfDegree;
 	}
 	
 	//setter
 	
-	public void setTypeOfDegree(String type_of_degree){
-		this.type_of_degree=type_of_degree;
+	public void setTypeOfDegree(String typeOfDegree){
+		this.typeOfDegree = typeOfDegree;
 	}
 
 }
