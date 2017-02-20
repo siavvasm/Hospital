@@ -3,18 +3,18 @@ package model;
 public class Patient {
 	
 	private int id;
-	private String first_name;
-	private String last_name;
+	private String first_name; // Don't use underscores
+	private String last_name; // Don't use underscores
 	private int insurance_id;
 	private double weight;
 	private double height;
-	private String blood_type;
+	private String blood_type; // Don't use underscores
 	private String insurance;
 	
 	//constructor
 	
 	public Patient(int id, String first_name, String last_name, int insurance_id, double weight, double height, String blood_type, String insurance){
-		this.id=id;
+		this.id=id; // Leave spaces between mathematical signs
 		this.first_name=first_name;
 		this.last_name=last_name;
 		this.insurance_id=insurance_id;

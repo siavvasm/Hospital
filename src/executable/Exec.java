@@ -16,12 +16,17 @@ public class Exec {
 
 	public static void main(String[] args) {
 		
+		/*
+		 *  1. Definition of the Hospital object fields
+		 */
+		// Your variables should be more descriptive (and more than three letters :P)
 		List<Character> l1 = new ArrayList<Character>();
 		List<Character> l2 = new ArrayList<Character>();
 		List<Integer> dl1 = new ArrayList<Integer>();
 		List<Integer> dl2 = new ArrayList<Integer>();
 		
-		List<Doctor> doc = new ArrayList<Doctor>();
+		
+		List<Doctor> doc = new ArrayList<Doctor>(); // call this list something like doctors. Do the same for the other variables.
 		List<Nurse> nur = new ArrayList<Nurse>();
 		List<Employee> empl = new ArrayList<Employee>();
 		List<Patient> pat = new ArrayList<Patient>();
@@ -42,6 +47,10 @@ public class Exec {
 		
 		Doctor doc1 = new Doctor(1,"George","Papadopoulos",45,3000,"D1","pathologist","fully");
 		Doctor doc2 = new Doctor(2,"Mary","Smith",40,2500,"D2","dentist","fully");
+		
+		// Alternatively:
+		// doctors.add(new Doctor(1,"George","Papadopoulos",45,3000,"D1","pathologist","fully"));
+		//
 
 		Nurse n1 = new Nurse(1,"Kate","Tale",30,700,"D1","university");
 		Nurse n2 = new Nurse(2,"Pete","Brown",31,700,"D2","school");
@@ -57,7 +66,10 @@ public class Exec {
 		
 		Measurement m1 = new Measurement("Blood Pressure", 12, "no clue", "2017-02-17", 1,1);
 		Measurement m2 = new Measurement("Hematocrit", 38, "no clue", "2017-02-18", 2,2);
-
+		
+		/*
+		 * 2. Add the individual objects to the appropriate lists
+		 */
 		doc.add(doc1);
 		doc.add(doc2);
 		
@@ -81,13 +93,18 @@ public class Exec {
 		meas.add(m1);
 		meas.add(m2);
 		
+		/*
+		 * 3. Create the Hospital object containing the predefined info
+		 */
+		
 		Hospital hospital = new Hospital(empl,dep,pat,meas,hosp);
 		
-		//printing info about the hospital
+		/*
+		 * 4. Printing info about the hospital
+		 */
 		
 		hospital.printEmployee();
 		hospital.printDepartment();
-		
 		hospital.belongTo("D1");
 
 	}

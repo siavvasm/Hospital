@@ -7,22 +7,28 @@ public class Department {
 	
 	private String name;
 	private Doctor director;
-	private List<Character> num_of_buildings = new ArrayList<Character>();
+	private List<Character> num_of_buildings = new ArrayList<Character>(); // Don't use underscores. Use camel case insted.
 
-	//Constructor
+	/*
+	 * Constructor
+	 */
 	
 	public Department(String name, Doctor director, List<Character> num_of_buildings){
-		this.name=name;
-		this.director=director;
-		this.num_of_buildings=num_of_buildings;
+		this.name = name;
+		this.director = director;
+		this.num_of_buildings = num_of_buildings;
 	}
+	
+	/*
+	 * Setters and Getters
+	 */
 	
 	public String getName(){
 		return name;
 	}
 		
 	public void setName(String name){
-		this.name=name;
+		this.name = name;
 	}
 
 	public Doctor getDirector() {
@@ -37,7 +43,7 @@ public class Department {
 		return num_of_buildings;
 	}
 
-	public void setNum_of_buildings(List<Character> num_of_buildings) {
+	public void setNum_of_buildings(List<Character> num_of_buildings) { // Don't use underscores.
 		this.num_of_buildings = num_of_buildings;
 	}
 }
