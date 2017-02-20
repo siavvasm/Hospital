@@ -67,10 +67,10 @@ public class Hospital {
 		}
 	}
 		
-		public void printDepartment(){
-			for(Department d:department){
-				System.out.println("Department: " + d.getName());
-			}
+	public void printDepartment(){
+		for(Department d:department){
+			System.out.println("Department: " + d.getName());
+		}
 	}
 		
 	public List<Employee> belongTo(String departmentName){
