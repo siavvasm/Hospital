@@ -1,25 +1,32 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Hospital {
 	
-	private List<Employee> employee = new ArrayList<Employee>();
-	private List<Department> department = new ArrayList<Department>();
-	private List<Patient> patient = new ArrayList<Patient>();
-	private List<Measurement> measurement = new ArrayList<Measurement>();
-	private List<Hospitality> hospitality = new ArrayList<Hospitality>();
+	private List<Employee> employee = new ArrayList<Employee>(); // employees
+	private List<Department> department = new ArrayList<Department>(); // departments
+	private List<Patient> patient = new ArrayList<Patient>(); // patients
+	private List<Measurement> measurement = new ArrayList<Measurement>(); // measurements
+	private List<Hospitality> hospitality = new ArrayList<Hospitality>(); // hospitalityEntries
 	
-	//constructor
+	/*
+	 * Constructor
+	 */
 	
 	public Hospital(List<Employee> employee, List<Department> department, List<Patient> patient, List<Measurement> measurement, List<Hospitality> hospitality){
-		this.employee=employee;
+		this.employee=employee; // Leave spaces
 		this.department=department;
 		this.patient=patient;
 		this.measurement=measurement;
 		this.hospitality=hospitality;
 	}
+	
+	/*
+	 * Setters and Getters
+	 */
 	
 	public List<Employee> getEmployee() {
 		return employee;
@@ -66,22 +73,48 @@ public class Hospital {
 			System.out.println("Employee: " +e.getClass()+" "+ e.getFirstName()+" "+e.getLastName());
 		}
 	}
-		
+	
+	/*
+	 * Methods for testing
+	 */
+	
+	/**
+	 * 
+	 */
 	public void printDepartment(){
+		
+		/*
+		// Alternative implementation - Using Iterators
+		Iterator iterator = department.iterator();
+		Department temp = null;
+		while (iterator.hasNext()) {
+			temp = (Department) iterator.next();
+			System.out.println("Department: " + temp.getName());
+		}
+		*/
+		
 		for(Department d:department){
 			System.out.println("Department: " + d.getName());
 		}
 	}
-		
+	
+	/**
+	 * @param departmentName
+	 * @return
+	 */
 	public List<Employee> belongTo(String departmentName){
-		List<Employee> empl = new ArrayList<Employee>();
-		System.out.println("The employees that belong to " +departmentName+" "+ "are: ");
+		
+		// Create an empty list for storing the employees of the desired department
+		List<Employee> empl = new ArrayList<Employee>(); // Preferable list name: deptEmployees or employees
+		System.out.println("The employees that belong to " + departmentName + " " + "are: ");
+		
 		for (Employee e : employee){
-			if (e.getDepartment().equals(departmentName)){
+			
+			if (e.getDepartment().equals(departmentName)){ // getDepatmentName()
 				empl.add(e);
 				System.out.println(e.getLastName());
 			}
 		}
-		return empl;
+		return employee;
 	}
 }

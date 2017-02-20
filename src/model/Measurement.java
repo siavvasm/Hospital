@@ -7,12 +7,12 @@ public class Measurement {
 	private String unit;
 	private String date;
 	private int id;
-	private int patient_id;
+	private int patient_id; // Don't use underscores
 	
 	//constructor
 	
 	public Measurement(String name, double value, String unit, String date, int id, int patient_id){
-		this.name=name;
+		this.name=name; // Leave one space between mathematical signs
 		this.value=value;
 		this.unit=unit;
 		this.date=date;
@@ -56,16 +56,16 @@ public class Measurement {
 		this.id = id;
 	}
 
-	public int getPatient_id() {
+	public int getPatient_id() { // Don't use underscores
 		return patient_id;
 	}
 
-	public void setPatient_id(int patient_id) {
+	public void setPatient_id(int patient_id) { // Don't use underscores
 		this.patient_id = patient_id;
 	}
 
 	public void setName(String name){
-		this.name=name;
+		this.name = name;
 	}
 
 }

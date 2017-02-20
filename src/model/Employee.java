@@ -3,8 +3,8 @@ package model;
 public class Employee {
 	
 	private int id;
-	private String first_name;
-	private String last_name;
+	private String first_name; // Don't use underscores
+	private String last_name; // Don't use underscores
 	private int age;
 	private double salary;
 	private String department;
